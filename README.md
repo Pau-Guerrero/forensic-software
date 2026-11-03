@@ -3,3 +3,13 @@
 - S'ha creat el fitxer `data/ghost_hosts.csv`.
 - El contracte inicial conté les columnes `IP`, `Nom_Amenaca` i `Nivell_Risc`.
 - L'Agent 2 haurà d'utilitzar aquesta estructura en el seu script.
+
+
+
+## Fase 2 - Investigació de la branca infectada
+
+- S'ha investigat la branca `feature/nightmare-code`.
+- S'ha localitzat el fitxer `scripts/nightmare.sh`.
+- S'ha detectat l'ordre `rm -f data/ghost_hosts.csv`.
+- Aquesta ordre podria eliminar el diccionari d'amenaces.
+- La branca infectada no s'ha integrat a `main`.
