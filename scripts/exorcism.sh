@@ -7,9 +7,16 @@ echo "Error: no s'ha trobat el fitxer $CSV"
 exit 1
 fi
  
-echo "Iniciant analisi d'amenaces..."
+echo "Iniciant analisi de ports infectats..."
  
-tail -n +2 "$CSV" | while IFS=',' read -r ip amenaca risc
+tail -n +2 "$CSV" | while IFS=',' read -r ip amenaca risc port
 do
-echo "Analitzant $ip - $amenaca - Risc: $risc"
+case "$port" in
+22|80|443|3389)
+echo "ALERTA: $ip - $amenaca - Port critic infectat: $port"
+;;
+*)
+echo "DESCARTAT: $ip*- Port no critic: $port"
+* ;;
+esac
 done
