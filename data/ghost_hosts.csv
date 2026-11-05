@@ -1,4 +1,6 @@
-IP,Nom_Amenaca,Nivell_Risc
-192.168.1.15,GhostWare,Alt
-192.168.1.27,SpectralBot,Mitja
-192.168.1.66,NightmareRoot,Critic
+IP,Nom_Amenaca,Nivell_Risc,Port_Infectat
+192.168.1.15,GhostWare,Alt,22
+192.168.1.27,SpectralBot,Mitja,8080
+192.168.1.66,NightmareRoot,Critic,443
+192.168.1.80,ShadowDaemon,Baix,3000
+192.168.1.99,PhantomRDP,Critic,3389
